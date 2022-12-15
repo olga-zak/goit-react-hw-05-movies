@@ -15,5 +15,12 @@ export const Home = () => {
     fetchTrendingMovies().then(setMovies);
   }, []);
 
-  return movies && <MoviesList movies={movies} />;
+  return (
+    movies && (
+      <>
+        <h1>What's Popular Today</h1>
+        <MoviesList movies={movies} />
+      </>
+    )
+  );
 };
