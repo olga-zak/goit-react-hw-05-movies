@@ -30,17 +30,20 @@ export async function fetchMoviesBySearchQuery(searchWord, page) {
     console.log(error);
   }
 }
-// //запрос по поисковому слову
-// export async function fetchMovieByQuery(query, page) {
-//   try {
-//     const { data } = await axios.get(
-//       `${BASE_URL}3/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`
-//     );
-//     return data;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+
+export async function fetchMovieById(movieId) {
+  try {
+    const response = await axios(`movie/${movieId}`, {
+      params: {
+        api_key: API_KEY,
+        id: movieId,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // //запрос по ид для модалки
 // export async function fetchMovieById(id) {

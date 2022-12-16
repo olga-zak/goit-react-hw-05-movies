@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 
 import { fetchMoviesBySearchQuery } from 'services/moviesAPI';
 
@@ -28,6 +29,7 @@ export const Movies = () => {
       <h1>Here will be Movies Search form</h1>
       <SearchForm onSubmit={updateSearchQuery} />
       {movies && <MoviesList movies={movies} />}
+      <Outlet />
     </>
   );
 };
