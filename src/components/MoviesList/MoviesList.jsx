@@ -6,7 +6,9 @@ export const MoviesList = ({ movies }) => {
   return (
     <ul>
       {movies.map(movie => {
-        return <MoviesListItem key={movie.id} title={movie.title} />;
+        return (
+          <MoviesListItem key={movie.id} title={movie.title} id={movie.id} />
+        );
       })}
     </ul>
   );

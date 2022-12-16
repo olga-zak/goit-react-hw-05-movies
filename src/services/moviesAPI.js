@@ -16,6 +16,20 @@ export async function fetchTrendingMovies() {
   }
 }
 
+export async function fetchMoviesBySearchQuery(searchWord, page) {
+  try {
+    const response = await axios('search/movie', {
+      params: {
+        api_key: API_KEY,
+        query: searchWord,
+        page,
+      },
+    });
+    return response.data.results;
+  } catch (error) {
+    console.log(error);
+  }
+}
 // //запрос по поисковому слову
 // export async function fetchMovieByQuery(query, page) {
 //   try {
