@@ -2,7 +2,9 @@ export const MovieCard = ({ movieData }) => {
   //console.log(movieData);
   const { title, release_date, poster_path, overview, genres, vote_average } =
     movieData;
-  const listOfGenres = genres.map(genre => <li>{genre.name}</li>);
+  const listOfGenres = genres.map(genre => (
+    <li key={genre.id}>{genre.name}</li>
+  ));
   const userScore = Math.round(vote_average * 10);
   return (
     <>
