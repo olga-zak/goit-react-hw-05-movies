@@ -25,3 +25,6 @@ export const MovieCard = ({ movieData }) => {
     </>
   );
 };
+
+// !!!add proptypes!!!
+// https://codepen.io/simoberny/pen/WMMqwL
