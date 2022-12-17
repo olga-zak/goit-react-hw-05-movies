@@ -5,7 +5,9 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
-  //const isFirstRender = useRef(true);
+
+  //убрать этот isFirstRender при пуше на гит, из-за него идёт запрос на сервер
+  // const isFirstRender = useRef(true);
 
   useEffect(() => {
     // if (isFirstRender.current) {
