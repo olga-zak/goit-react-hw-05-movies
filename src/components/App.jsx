@@ -5,18 +5,23 @@ import { Home } from 'pages/Home/Home';
 import { Movies } from 'pages/Movies/Movies';
 import { MoviePage } from 'pages/MoviePage/MoviePage';
 
+import { GlobalStyles } from './GlobalStyles';
+
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        {/* index === path="/" */}
-        {/* <Route index element={<Home />} /> */}
-        <Route index element={<Home />} />
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* index === path="/" */}
+          {/* <Route index element={<Home />} /> */}
+          <Route index element={<Home />} />
 
-        <Route path="movies" element={<Movies />} />
+          <Route path="movies" element={<Movies />} />
 
-        <Route path="movies/:movieId" element={<MoviePage />} />
-      </Route>
-    </Routes>
+          <Route path="movies/:movieId" element={<MoviePage />} />
+        </Route>
+      </Routes>
+      <GlobalStyles />
+    </>
   );
 };
