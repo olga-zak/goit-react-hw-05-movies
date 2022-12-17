@@ -9,13 +9,13 @@ export const MovieCardWrapper = styled.div`
   margin: 80px auto;
   overflow: hidden;
   border-radius: 10px;
-  transition: all 0.4s;
+  //transition: all 0.4s;
   box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
-  &:hover {
+  /* &:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
     transition: all 0.4s;
-  }
+  } */
 `;
 
 export const InfoSection = styled.div`
@@ -81,10 +81,49 @@ export const Background = styled.div`
   right: 0;
   background-size: cover;
   border-radius: 11px;
+
+  background: #ada996; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* background-image: radial-gradient(
     circle at top right,
     var(--start-color) 10%,
     var(--end-color) 50%
   ); */
-  background-image: url('https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg');
+  //background-image: url('https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg');
+`;
+
+export const AdditionalInfo = styled.div`
+  height: 10%;
+  padding-left: 15px;
+  padding-bottom: 20px;
+`;
+export const AdditionalInfoItem = styled.li`
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.3);
+  transition: color 0.3s;
+  transition-delay: 0.15s;
+  margin: 0 10px;
+  &:hover {
+    transition: color 0.3s;
+    color: rgba(0, 0, 0, 0.7);
+  }
+`;
+
+export const AdditionalInfoText = styled.i`
+  font-size: 19px;
+  cursor: pointer;
 `;

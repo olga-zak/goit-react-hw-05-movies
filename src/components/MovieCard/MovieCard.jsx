@@ -9,6 +9,9 @@ import {
   Genres,
   Overview,
   Background,
+  AdditionalInfo,
+  AdditionalInfoItem,
+  AdditionalInfoText,
 } from './MovieCard.styled';
 
 export const MovieCard = ({ movieData }) => {
@@ -38,19 +41,23 @@ export const MovieCard = ({ movieData }) => {
         {/* <div class="movie_desc"> */}
         <Overview class="text">{overview}</Overview>
         {/* </div> */}
-        {/* <div class="movie_social">
+        <AdditionalInfo class="movie_social">
           <ul>
-            <li>
-              <i class="material-icons">share</i>
-            </li>
-            <li>
-              <i class="material-icons"></i>
-            </li>
-            <li>
+            <AdditionalInfoItem>
+              <AdditionalInfoText class="material-icons">
+                Cast
+              </AdditionalInfoText>
+            </AdditionalInfoItem>
+            <AdditionalInfoItem>
+              <AdditionalInfoText class="material-icons">
+                Reviews
+              </AdditionalInfoText>
+            </AdditionalInfoItem>
+            {/* <li>
               <i class="material-icons">chat_bubble</i>
-            </li>
+            </li> */}
           </ul>
-        </div> */}
+        </AdditionalInfo>
       </InfoSection>
       <Background class="blur_back bright_back"></Background>
     </MovieCardWrapper>
