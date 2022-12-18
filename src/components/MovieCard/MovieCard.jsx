@@ -13,7 +13,6 @@ import {
   Background,
   AdditionalInfo,
   AdditionalInfoItem,
-  AdditionalInfoText,
 } from './MovieCard.styled';
 
 export const MovieCard = ({ movieData }) => {
