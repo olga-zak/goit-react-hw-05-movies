@@ -1,19 +1,22 @@
 // import { NavLink } from 'react-router-dom';
-import { StyledNavLink } from './Navigation.styled';
+import { Container } from 'components/CommonStyles';
+import { List, Item, HomeLink, MoviesLink } from './Navigation.styled';
 
 export const Navigation = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <StyledNavLink to="/" end>
-            Home
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/movies">Movies</StyledNavLink>
-        </li>
-      </ul>
-    </nav>
+    <Container>
+      <nav>
+        <List>
+          <Item>
+            <HomeLink to="/" end>
+              Home
+            </HomeLink>
+          </Item>
+          <Item>
+            <MoviesLink to="/movies">Movies</MoviesLink>
+          </Item>
+        </List>
+      </nav>
+    </Container>
   );
 };

@@ -2,15 +2,17 @@ import { Outlet } from 'react-router-dom';
 
 import { Navigation } from 'components/Navigation/Navigation';
 
+import { Header, Main } from './Layout.styled';
+
 export const Layout = () => {
   return (
     <>
-      <header>
+      <Header>
         <Navigation />
-      </header>
-      <main>
+      </Header>
+      <Main>
         <Outlet />
-      </main>
+      </Main>
       <footer>Footer</footer>
     </>
   );
