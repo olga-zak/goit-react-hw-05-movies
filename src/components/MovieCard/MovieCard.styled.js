@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+//import { Link } from 'react-router-dom';
 
 //may be transition is not needed?
 export const MovieCardWrapper = styled.div`
@@ -60,7 +61,7 @@ export const Image = styled.img`
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 `;
 
-export const Genres = styled.p`
+export const Genres = styled.ul`
   display: inline-block;
   color: #959595;
   margin-left: 10px;
@@ -123,7 +124,7 @@ export const AdditionalInfoItem = styled.li`
   }
 `;
 
-export const AdditionalInfoText = styled.i`
-  font-size: 19px;
-  cursor: pointer;
-`;
+// export const AdditionalInfoText = styled(Link)`
+//   font-size: 19px;
+//   cursor: pointer;
+// `;

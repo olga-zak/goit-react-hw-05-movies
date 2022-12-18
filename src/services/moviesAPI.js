@@ -45,6 +45,20 @@ export async function fetchMovieById(movieId) {
   }
 }
 
+export async function fetchMovieCreditsById(movieId) {
+  try {
+    const response = await axios(`movie/${movieId}/credits`, {
+      params: {
+        api_key: API_KEY,
+        id: movieId,
+      },
+    });
+    return response.data.cast;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // //запрос по ид для модалки
 // export async function fetchMovieById(id) {
 //   try {

@@ -4,6 +4,7 @@ import { Layout } from './Layout/Layout';
 import { Home } from 'pages/Home/Home';
 import { Movies } from 'pages/Movies/Movies';
 import { MoviePage } from 'pages/MoviePage/MoviePage';
+import { MovieCast } from './MovieCast/MovieCast';
 
 import { GlobalStyles } from './GlobalStyles';
 
@@ -18,7 +19,10 @@ export const App = () => {
 
           <Route path="movies" element={<Movies />} />
 
-          <Route path="movies/:movieId" element={<MoviePage />} />
+          {/* <Route path="movies/:movieId" element={<MoviePage />} /> */}
+          <Route path="movies/:movieId" element={<MoviePage />}>
+            <Route path="cast" element={<MovieCast />} />
+          </Route>
         </Route>
       </Routes>
       <GlobalStyles />

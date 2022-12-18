@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import {
   MovieCardWrapper,
   InfoSection,
@@ -23,43 +25,33 @@ export const MovieCard = ({ movieData }) => {
   ));
   const userScore = Math.round(vote_average * 10);
   return (
-    <MovieCardWrapper class="movie_card" id="bright">
-      <InfoSection class="info_section">
-        <MovieHeader class="movie_header">
+    <MovieCardWrapper>
+      <InfoSection>
+        <MovieHeader>
           <Image
-            class="locandina"
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={title}
           />
           <MainHeader>{title}</MainHeader>
           <SubHeader>{release_date}</SubHeader>
-          <Score class="minutes">Score {userScore}%</Score>
-          <Genres class="type">
-            <ul>{listOfGenres}</ul>
-          </Genres>
+          <Score>Score {userScore}%</Score>
+          <Genres>{listOfGenres}</Genres>
         </MovieHeader>
-        {/* <div class="movie_desc"> */}
-        <Overview class="text">{overview}</Overview>
-        {/* </div> */}
-        <AdditionalInfo class="movie_social">
+
+        <Overview>{overview}</Overview>
+
+        <AdditionalInfo>
           <ul>
             <AdditionalInfoItem>
-              <AdditionalInfoText class="material-icons">
-                Cast
-              </AdditionalInfoText>
+              <Link to="cast">Cast</Link>
             </AdditionalInfoItem>
             <AdditionalInfoItem>
-              <AdditionalInfoText class="material-icons">
-                Reviews
-              </AdditionalInfoText>
+              <Link>Reviews</Link>
             </AdditionalInfoItem>
-            {/* <li>
-              <i class="material-icons">chat_bubble</i>
-            </li> */}
           </ul>
         </AdditionalInfo>
       </InfoSection>
-      <Background class="blur_back bright_back"></Background>
+      <Background></Background>
     </MovieCardWrapper>
     // <>
     //   <p>This is movie card</p>
