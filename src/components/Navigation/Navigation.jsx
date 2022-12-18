@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { Container } from 'components/CommonStyles';
 import { List, Item, HomeLink, MoviesLink } from './Navigation.styled';
 
