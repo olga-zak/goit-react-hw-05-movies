@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 //import { Link } from 'react-router-dom';
 
-//may be transition is not needed?
 export const MovieCardWrapper = styled.div`
   position: relative;
   //display: block;
@@ -13,17 +12,7 @@ export const MovieCardWrapper = styled.div`
   box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
 `;
 
-export const InfoSection = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-blend-mode: multiply;
-  z-index: 2;
-  border-radius: 10px;
-`;
-
 export const MovieHeader = styled.div`
-  //position: relative;
   padding: 25px;
   height: 40%;
 `;
@@ -31,11 +20,6 @@ export const MovieHeader = styled.div`
 export const MainHeader = styled.h1`
   margin-bottom: 15px;
   color: black;
-  font-weight: 400;
-`;
-
-export const SubHeader = styled.h4`
-  color: #555;
   font-weight: 400;
 `;
 
@@ -49,7 +33,6 @@ export const Score = styled.span`
 `;
 
 export const Image = styled.img`
-  //position: relative;
   float: left;
   margin-right: 20px;
   height: 120px;
@@ -89,29 +72,10 @@ export const Background = styled.div`
   background-repeat: no-repeat;
   opacity: 0.3;
   background-position: 50% 50%;
-  // background: #ada996; /* fallback for old browsers */
-  // background: -webkit-linear-gradient(
-  //   to right,
-  //   #eaeaea,
-  //   #dbdbdb,
-  //   #f2f2f2,
-  //   #ada996
-  // ); /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(
-  //   to right,
-  //   #eaeaea,
-  //   #dbdbdb,
-  //   #f2f2f2,
-  //   #ada996
-  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  //background-image: url('https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg');
 `;
 
 export const AdditionalInfo = styled.ul`
   height: 10%;
-  //padding-left: 15px;
-  //padding-bottom: 20px;
   padding: 25px;
 `;
 export const AdditionalInfoItem = styled.li`
@@ -125,8 +89,3 @@ export const AdditionalInfoItem = styled.li`
     color: rgba(0, 0, 0, 0.7);
   }
 `;
-
-// export const AdditionalInfoText = styled(Link)`
-//   font-size: 19px;
-//   cursor: pointer;
-// `;
