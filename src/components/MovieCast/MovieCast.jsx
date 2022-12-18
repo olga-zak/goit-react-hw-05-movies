@@ -4,6 +4,9 @@ import { fetchMovieCreditsById } from 'services/moviesAPI';
 import { useParams } from 'react-router-dom';
 
 import { ActorCard } from 'components/ActorCard/ActorCard';
+
+import { List } from './MovieCast.styled';
+
 export const MovieCast = () => {
   const [credits, setCredits] = useState(null);
   const { movieId } = useParams();
@@ -16,7 +19,7 @@ export const MovieCast = () => {
   return (
     <>
       {credits && (
-        <ul>
+        <List>
           {credits.map(credit => {
             return (
               <ActorCard
@@ -27,7 +30,7 @@ export const MovieCast = () => {
               />
             );
           })}
-        </ul>
+        </List>
       )}
       <p>Here will be additional info "Movie Cast"</p>
     </>
