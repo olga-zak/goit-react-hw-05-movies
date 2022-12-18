@@ -46,7 +46,7 @@ export const MovieCard = ({ movieData }) => {
               <Link to="cast">Cast</Link>
             </AdditionalInfoItem>
             <AdditionalInfoItem>
-              <Link>Reviews</Link>
+              <Link to="reviews">Reviews</Link>
             </AdditionalInfoItem>
           </ul>
         </AdditionalInfo>

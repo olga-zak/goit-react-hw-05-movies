@@ -59,26 +59,16 @@ export async function fetchMovieCreditsById(movieId) {
   }
 }
 
-// //запрос по ид для модалки
-// export async function fetchMovieById(id) {
-//   try {
-//     const { data } = await axios.get(
-//       `${BASE_URL}3/movie/${id}?api_key=${API_KEY}`
-//     );
-
-//     return data;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-// export async function fetchGenres() {
-//   try {
-//     const { data } = await axios.get(
-//       `${BASE_URL}3/genre/movie/list?api_key=${API_KEY}`
-//     );
-//     return data.genres;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+export async function fetchMovieReviewsById(movieId) {
+  try {
+    const response = await axios(`movie/${movieId}/reviews`, {
+      params: {
+        api_key: API_KEY,
+        id: movieId,
+      },
+    });
+    return response.data.results;
+  } catch (error) {
+    console.log(error);
+  }
+}
