@@ -1,14 +1,19 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 
-export const MoviesListItem = ({ title, id }) => {
+import { Item, Img, Text, LinkText } from './MovieListItem';
+
+export const MoviesListItem = ({ title, id, poster }) => {
   // const idToString = id.toString();
   return (
-    <li>
+    <Item>
       {/* <Link to={idToString}>{title}</Link> */}
-      <Link to={`/movies/${id}`}>{title}</Link>
-    </li>
+      <LinkText to={`/movies/${id}`}>
+        <Img src={`https://image.tmdb.org/t/p/w500${poster}`} alt={title} />
+        <Text>{title}</Text>
+      </LinkText>
+    </Item>
   );
 };
 

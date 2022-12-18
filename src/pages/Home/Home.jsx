@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchTrendingMovies } from 'services/moviesAPI';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+
+import { Container } from 'components/CommonStyles';
+import { Header } from './Home.styled';
+
 //import { Link } from 'react-router-dom';
 
 export const Home = () => {
@@ -29,10 +33,10 @@ export const Home = () => {
       //       );
       //     })}
       //   </ul>
-      <>
-        <h1>What's Popular Today</h1>
+      <Container>
+        <Header>What's Popular Today</Header>
         <MoviesList movies={movies} />
-      </>
+      </Container>
     )
   );
 };

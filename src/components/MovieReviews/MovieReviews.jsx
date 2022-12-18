@@ -10,7 +10,7 @@ export const MovieReviews = () => {
     fetchMovieReviewsById(movieId).then(setReviews);
   }, [movieId]);
 
-  console.log(reviews);
+  //console.log(reviews); //сначала консолит нулл, потом только массив
   return (
     <>
       {reviews && (

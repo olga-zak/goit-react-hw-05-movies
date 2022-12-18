@@ -12,7 +12,7 @@ export const MovieCast = () => {
     fetchMovieCreditsById(movieId).then(setCredits);
   }, [movieId]);
 
-  console.log(credits); //сначала консолит нулл, потом только массив
+  //console.log(credits); //сначала консолит нулл, потом только массив
   return (
     <>
       {credits && (

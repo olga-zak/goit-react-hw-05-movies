@@ -2,15 +2,23 @@ import PropTypes from 'prop-types';
 
 import { MoviesListItem } from 'components/MoviesListItem/MoviesListItem';
 
+import { List } from './MovieList';
+
 export const MoviesList = ({ movies }) => {
+  console.log(movies);
   return (
-    <ul>
+    <List>
       {movies.map(movie => {
         return (
-          <MoviesListItem key={movie.id} title={movie.title} id={movie.id} />
+          <MoviesListItem
+            key={movie.id}
+            title={movie.title}
+            id={movie.id}
+            poster={movie.poster_path}
+          />
         );
       })}
-    </ul>
+    </List>
   );
 };
 
