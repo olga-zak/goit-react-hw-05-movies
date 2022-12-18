@@ -8,7 +8,6 @@ export const MoviePage = () => {
   const movie = useFetchMovie();
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   return (
     <>
@@ -16,7 +15,7 @@ export const MoviePage = () => {
         <>
           <button
             onClick={() => {
-              navigate(location.state.from);
+              navigate(location?.state?.from ?? '/');
             }}
           >
             Go back
