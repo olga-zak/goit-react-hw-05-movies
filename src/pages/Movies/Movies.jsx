@@ -7,6 +7,8 @@ import { fetchMoviesBySearchQuery } from 'services/moviesAPI';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 
+import { Container } from 'components/CommonStyles';
+
 export const Movies = () => {
   //const [searchWord, setSearchword] = useState('');
   const [page, setPage] = useState(1);
@@ -32,11 +34,10 @@ export const Movies = () => {
   };
 
   return (
-    <>
-      <h1>Here will be Movies Search form</h1>
+    <Container>
       <SearchForm onSubmit={updateSearchQuery} />
       {movies && <MoviesList movies={movies} />}
       <Outlet />
-    </>
+    </Container>
   );
 };
