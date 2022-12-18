@@ -7,7 +7,7 @@ export const MovieCardWrapper = styled.div`
   display: block;
   width: 800px;
   height: 350px;
-  margin: 80px auto;
+  margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
   //transition: all 0.4s;

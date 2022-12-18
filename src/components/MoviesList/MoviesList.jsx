@@ -5,7 +5,7 @@ import { MoviesListItem } from 'components/MoviesListItem/MoviesListItem';
 import { List } from './MovieList';
 
 export const MoviesList = ({ movies }) => {
-  console.log(movies);
+  //console.log(movies);
   return (
     <List>
       {movies.map(movie => {
