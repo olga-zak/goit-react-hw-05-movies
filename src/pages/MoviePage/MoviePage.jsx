@@ -1,17 +1,29 @@
 import { Outlet } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useFetchMovie } from 'hooks/useFetchMovie';
-//import { useFetchMovieCredits } from 'hooks/useFetchMovieCredits';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 //import { MovieCast } from 'components/MovieCast/MovieCast';
 
 export const MoviePage = () => {
   const movie = useFetchMovie();
-  //const credits = useFetchMovieCredits();
-  //console.log(credits);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   return (
     <>
-      {movie && <MovieCard movieData={movie} />}
+      {movie && (
+        <>
+          <button
+            onClick={() => {
+              navigate(location.state.from);
+            }}
+          >
+            Go back
+          </button>
+          <MovieCard movieData={movie} />
+        </>
+      )}
       <Outlet />
       {/* {credits && <MovieCast data={credits} />} */}
     </>
