@@ -7,7 +7,7 @@ import { ActorCard } from 'components/ActorCard/ActorCard';
 
 import { List } from './MovieCast.styled';
 
-export const MovieCast = () => {
+const MovieCast = () => {
   const [credits, setCredits] = useState(null);
   const { movieId } = useParams();
 
@@ -36,3 +36,4 @@ export const MovieCast = () => {
     </>
   );
 };
+export default MovieCast;

@@ -6,7 +6,7 @@ import { MovieCard } from 'components/MovieCard/MovieCard';
 import { Container } from 'components/CommonStyles';
 import { Button } from './MoviePage.styled';
 
-export const MoviePage = () => {
+const MoviePage = () => {
   const movie = useFetchMovie();
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,3 +31,4 @@ export const MoviePage = () => {
     </>
   );
 };
+export default MoviePage;

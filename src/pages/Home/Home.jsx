@@ -8,7 +8,7 @@ import { Header } from './Home.styled';
 
 //import { Link } from 'react-router-dom';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
 
   //убрать этот isFirstRender при пуше на гит, из-за него идёт запрос на сервер
@@ -41,3 +41,5 @@ export const Home = () => {
     )
   );
 };
+
+export default Home;

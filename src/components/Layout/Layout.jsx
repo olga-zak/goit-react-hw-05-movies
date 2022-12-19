@@ -4,7 +4,7 @@ import { Navigation } from 'components/Navigation/Navigation';
 
 import { Header, Main } from './Layout.styled';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <>
       <Header>
@@ -17,3 +17,4 @@ export const Layout = () => {
     </>
   );
 };
+export default Layout;
