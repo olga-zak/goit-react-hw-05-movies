@@ -1,15 +1,13 @@
 import { Outlet } from 'react-router-dom';
 
-import { Navigation } from 'components/Navigation/Navigation';
-
-import { Header, Main } from './Layout.styled';
+import { Main } from './Layout.styled';
 
 const Layout = () => {
   return (
     <>
-      <Header>
+      {/* <Header>
         <Navigation />
-      </Header>
+      </Header> */}
       <Main>
         <Outlet />
       </Main>

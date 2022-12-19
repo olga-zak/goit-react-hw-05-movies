@@ -1,12 +1,13 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './GlobalStyles';
-//import { Layout } from './Layout/Layout';
-// import { Home } from 'pages/Home/Home';
-// import { Movies } from 'pages/Movies/Movies';
-// import { MoviePage } from 'pages/MoviePage/MoviePage';
-// import { MovieCast } from './MovieCast/MovieCast';
-// import { MovieReviews } from './MovieReviews/MovieReviews';
+// import Layout from './Layout/Layout';
+// import Home from 'pages/Home/Home';
+// import Movies from 'pages/Movies/Movies';
+// import MoviePage from 'pages/MoviePage/MoviePage';
+//import MovieCast from './MovieCast/MovieCast';
+//import MovieReviews from './MovieReviews/MovieReviews';
+import Header from './Header/Header';
 
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('pages/Home/Home'));
@@ -18,6 +19,7 @@ const MovieReviews = lazy(() => import('./MovieReviews/MovieReviews'));
 export const App = () => {
   return (
     <>
+      <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Layout />}>
