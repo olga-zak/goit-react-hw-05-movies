@@ -4,6 +4,7 @@ import { useFetchMovie } from 'hooks/useFetchMovie';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 
 import { Container } from 'components/CommonStyles';
+import { Button } from './MoviePage.styled';
 
 export const MoviePage = () => {
   const movie = useFetchMovie();
@@ -15,13 +16,13 @@ export const MoviePage = () => {
       <Container>
         {movie && (
           <>
-            <button
+            <Button
               onClick={() => {
                 navigate(location?.state?.from ?? '/');
               }}
             >
               Go back
-            </button>
+            </Button>
             <MovieCard movieData={movie} />
           </>
         )}
