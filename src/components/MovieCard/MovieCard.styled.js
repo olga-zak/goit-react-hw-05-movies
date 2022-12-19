@@ -60,7 +60,7 @@ export const Overview = styled.p`
 export const Background = styled.div`
   position: absolute;
   top: 0;
-  z-index: -1;
+  //z-index: -1;
 
   height: 100%;
   width: 100%;
@@ -75,6 +75,9 @@ export const Background = styled.div`
 `;
 
 export const AdditionalInfo = styled.ul`
+  position: relative;
+  z-index: 5;
+
   height: 10%;
   padding: 25px;
 `;

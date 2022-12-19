@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const Item = styled.li`
   width: 210px;
+  background-color: #496785;
+  border-radius: 5px;
   transition: 0.4s;
 
   &:hover {
@@ -11,12 +13,13 @@ export const Item = styled.li`
 `;
 
 export const Img = styled.img`
-  margin-bottom: 5px;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 `;
 
 export const Text = styled.p`
-  margin-bottom: 5px;
+  padding: 10px;
+  color: #fff;
 `;
 
 export const LinkText = styled(Link)`
