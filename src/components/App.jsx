@@ -8,6 +8,7 @@ import { GlobalStyles } from './GlobalStyles';
 //import MovieCast from './MovieCast/MovieCast';
 //import MovieReviews from './MovieReviews/MovieReviews';
 import Header from './Header/Header';
+import { LoaderSuspense } from './LoaderSuspense/LoaderSuspense';
 
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('pages/Home/Home'));
@@ -20,7 +21,8 @@ export const App = () => {
   return (
     <>
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <LoaderSuspense /> */}
+      <Suspense fallback={<LoaderSuspense />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             {/* index === path="/" */}
