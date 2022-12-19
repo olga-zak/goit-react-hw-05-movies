@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Form = styled.form`
   width: 500px;
   height: 40px;
-  margin: 90px auto 15px auto;
-  background: #5689b8;
+  margin: 0 auto 15px auto;
+  background: #496785;
   border-radius: 5px;
 `;
 
