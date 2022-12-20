@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './GlobalStyles';
 // import Layout from './Layout/Layout';
@@ -8,7 +8,6 @@ import { GlobalStyles } from './GlobalStyles';
 //import MovieCast from './MovieCast/MovieCast';
 //import MovieReviews from './MovieReviews/MovieReviews';
 import Header from './Header/Header';
-import { LoaderSuspense } from './LoaderSuspense/LoaderSuspense';
 
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('pages/Home/Home'));
