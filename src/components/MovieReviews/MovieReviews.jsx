@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { fetchMovieReviewsById } from 'services/moviesAPI';
 import { useParams } from 'react-router-dom';
 
+import { Item, Author } from './MoviesReviews.styled';
+
 const MovieReviews = () => {
   const [reviews, setReviews] = useState(null);
   const { movieId } = useParams();
@@ -10,13 +12,20 @@ const MovieReviews = () => {
     fetchMovieReviewsById(movieId).then(setReviews);
   }, [movieId]);
 
-  //console.log(reviews); //сначала консолит нулл, потом только массив
   return (
     <>
       {reviews && (
         <ul>
           {reviews.map(review => {
-            return <li key={review.id}>{review.content}</li>;
+            return (
+              <Item key={review.id}>
+                <Author>
+                  Written by {review.author},{' '}
+                  {review.created_at.substring(0, 10)}
+                </Author>
+                <p>{review.content}</p>
+              </Item>
+            );
           })}
         </ul>
       )}
