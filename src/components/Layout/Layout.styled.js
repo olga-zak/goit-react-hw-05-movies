@@ -5,7 +5,6 @@ export const HeaderS = styled.header`
   height: 70px;
   z-index: 1;
   background-color: #5689b8;
-  //border-bottom: 1px solid #496785;
   border-bottom: 1px solid rgba(0, 255, 117, 0.3);
   position: fixed;
   top: 0;
@@ -15,6 +14,10 @@ export const HeaderS = styled.header`
 export const Main = styled.main`
   min-height: 100vh;
   padding-top: 80px;
-  //background-image: linear-gradient(to right, #373b44, #4286f4);
-  background-image: linear-gradient(to bottom, #5689b8 10%, #373b44);
+  padding-bottom: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(86, 137, 184, 1) 2%,
+    rgba(55, 59, 68, 0.5)
+  );
 `;

@@ -16,8 +16,6 @@ export const Button = styled.button`
   &:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
     transform: scale(1.02);
-    /* background: #fff;
-    color: #333; */
   }
   &:active {
     box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);

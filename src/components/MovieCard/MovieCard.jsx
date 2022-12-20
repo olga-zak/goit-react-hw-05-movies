@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import {
   MovieCardWrapper,
@@ -12,6 +12,7 @@ import {
   AdditionalInfo,
   AdditionalInfoItem,
   ListItem,
+  LinkStyled,
 } from './MovieCard.styled';
 
 export const MovieCard = ({ movieData }) => {
@@ -28,6 +29,7 @@ export const MovieCard = ({ movieData }) => {
     <ListItem key={genre.id}>{genre.name}</ListItem>
   ));
   const userScore = Math.round(vote_average * 10);
+  const release_year = release_date.split('-')[0];
   const location = useLocation();
   return (
     <MovieCardWrapper>
@@ -37,7 +39,7 @@ export const MovieCard = ({ movieData }) => {
           alt={title}
         />
         <MainHeader>
-          {title} ({release_date})
+          {title} ({release_year})
         </MainHeader>
         <Score>Score {userScore}%</Score>
         <Genres>{listOfGenres}</Genres>
@@ -47,14 +49,14 @@ export const MovieCard = ({ movieData }) => {
 
       <AdditionalInfo>
         <AdditionalInfoItem>
-          <Link to="cast" state={location.state}>
+          <LinkStyled to="cast" state={location.state}>
             Cast
-          </Link>
+          </LinkStyled>
         </AdditionalInfoItem>
         <AdditionalInfoItem>
-          <Link to="reviews" state={location.state}>
+          <LinkStyled to="reviews" state={location.state}>
             Reviews
-          </Link>
+          </LinkStyled>
         </AdditionalInfoItem>
       </AdditionalInfo>
 

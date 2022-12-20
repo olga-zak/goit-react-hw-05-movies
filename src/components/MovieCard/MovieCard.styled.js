@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const MovieCardWrapper = styled.div`
   position: relative;
-  //display: block;
   width: 800px;
   min-height: 250px;
   margin: 20px auto;
-  //overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
 `;
@@ -18,18 +16,14 @@ export const MovieHeader = styled.div`
 `;
 
 export const MainHeader = styled.h1`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: black;
-  font-weight: 400;
+  font-weight: 600;
 `;
 
 export const Score = styled.span`
-  /* display: inline-block;
-  margin-top: 15px;
-  color: #555;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.05); */
+  font-weight: 500;
+  font-size: 1.1em;
 `;
 
 export const Image = styled.img`
@@ -41,7 +35,8 @@ export const Image = styled.img`
 
 export const Genres = styled.ul`
   display: flex;
-  margin-top: 15px;
+  margin-top: 30px;
+  font-weight: 500;
   color: #141313;
 `;
 export const ListItem = styled.li`
@@ -54,20 +49,27 @@ export const ListItem = styled.li`
 export const Overview = styled.p`
   padding: 25px;
   height: 50%;
-  color: black;
+`;
+
+export const LinkStyled = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.4s;
+  &:hover {
+    color: #333;
+  }
 `;
 
 export const Background = styled.div`
   position: absolute;
   top: 0;
-  //z-index: -1;
-
   height: 100%;
   width: 100%;
   right: 0;
   background-size: cover;
   border-radius: 11px;
-
   background-image: url(${props => props.someUrl});
   background-repeat: no-repeat;
   opacity: 0.3;

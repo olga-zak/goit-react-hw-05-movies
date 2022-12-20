@@ -25,17 +25,8 @@ const Home = () => {
 
   return (
     movies && (
-      //   <ul>
-      //     {movies.map(({ title, id }) => {
-      //       return (
-      //         <li key={id}>
-      //           <Link to={id}>{title}</Link>
-      //         </li>
-      //       );
-      //     })}
-      //   </ul>
       <Container>
-        <Header>What's Popular Today</Header>
+        <Header>20 Most Popular Movies Right Now</Header>
         <MoviesList movies={movies} />
       </Container>
     )
