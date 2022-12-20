@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
+import { LoaderSuspense } from 'components/LoaderSuspense/LoaderSuspense';
 import { Main } from './Layout.styled';
 
 const Layout = () => {
@@ -9,7 +11,9 @@ const Layout = () => {
         <Navigation />
       </Header> */}
       <Main>
-        <Outlet />
+        <Suspense fallback={<LoaderSuspense />}>
+          <Outlet />
+        </Suspense>
       </Main>
       <footer>Footer</footer>
     </>

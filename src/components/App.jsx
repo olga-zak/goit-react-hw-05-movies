@@ -22,24 +22,24 @@ export const App = () => {
     <>
       <Header />
       {/* <LoaderSuspense /> */}
-      <Suspense fallback={<LoaderSuspense />}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            {/* index === path="/" */}
-            {/* <Route index element={<Home />} /> */}
-            <Route index element={<Home />} />
+      {/* <Suspense fallback={<LoaderSuspense />}> */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* index === path="/" */}
+          {/* <Route index element={<Home />} /> */}
+          <Route index element={<Home />} />
 
-            <Route path="movies" element={<Movies />} />
+          <Route path="movies" element={<Movies />} />
 
-            {/* <Route path="movies/:movieId" element={<MoviePage />} /> */}
-            <Route path="movies/:movieId" element={<MoviePage />}>
-              <Route path="cast" element={<MovieCast />} />
-              <Route path="reviews" element={<MovieReviews />} />
-            </Route>
-            <Route path="*" element={<Home />} />
+          {/* <Route path="movies/:movieId" element={<MoviePage />} /> */}
+          <Route path="movies/:movieId" element={<MoviePage />}>
+            <Route path="cast" element={<MovieCast />} />
+            <Route path="reviews" element={<MovieReviews />} />
           </Route>
-        </Routes>
-      </Suspense>
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+      {/* </Suspense> */}
       <GlobalStyles />
     </>
   );
