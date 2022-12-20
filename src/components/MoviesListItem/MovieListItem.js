@@ -11,6 +11,9 @@ export const Item = styled.li`
     transform: scale(1.02);
     box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
   }
+  &:active {
+    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+  }
 `;
 
 export const Img = styled.img`
