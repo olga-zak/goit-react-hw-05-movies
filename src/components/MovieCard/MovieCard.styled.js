@@ -9,7 +9,7 @@ export const MovieCardWrapper = styled.div`
   margin: 20px auto;
   //overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
 `;
 
 export const MovieHeader = styled.div`

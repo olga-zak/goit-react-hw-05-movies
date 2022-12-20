@@ -3,9 +3,14 @@ import styled from 'styled-components';
 export const Form = styled.form`
   width: 500px;
   height: 40px;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 20px auto;
   background: #496785;
+  border: 1px solid rgba(0, 255, 117, 0.3);
   border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+  }
 `;
 
 export const Input = styled.input`

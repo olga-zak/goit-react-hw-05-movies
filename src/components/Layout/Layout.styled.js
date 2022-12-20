@@ -5,7 +5,8 @@ export const HeaderS = styled.header`
   height: 70px;
   z-index: 1;
   background-color: #5689b8;
-  border-bottom: 1px solid #496785;
+  //border-bottom: 1px solid #496785;
+  border-bottom: 1px solid rgba(0, 255, 117, 0.3);
   position: fixed;
   top: 0;
   left: 0;
