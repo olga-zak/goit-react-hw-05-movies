@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { useRef } from 'react';
 import { fetchTrendingMovies } from 'services/moviesAPI';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 
@@ -11,14 +11,14 @@ import { Header } from './Home.styled';
 const Home = () => {
   const [movies, setMovies] = useState([]);
 
-  //убрать этот isFirstRender при пуше на гит, из-за него идёт запрос на сервер
-  // const isFirstRender = useRef(true);
+  //убрать этот isFirstRender при пуше на гит, из-за него не идёт запрос на сервер
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    // if (isFirstRender.current) {
-    //   isFirstRender.current = false;
-    //   return;
-    // }
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
 
     fetchTrendingMovies().then(setMovies);
   }, []);
