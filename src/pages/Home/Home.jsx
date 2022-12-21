@@ -12,13 +12,13 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   //убрать этот isFirstRender при пуше на гит, из-за него не идёт запрос на сервер
-  const isFirstRender = useRef(true);
+  // const isFirstRender = useRef(true);
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    // if (isFirstRender.current) {
+    //   isFirstRender.current = false;
+    //   return;
+    // }
 
     fetchTrendingMovies().then(setMovies);
   }, []);
