@@ -49,6 +49,8 @@ export const ListItem = styled.li`
 export const Overview = styled.p`
   padding: 25px;
   height: 50%;
+  font-size: 17px;
+  font-weight: 500;
 `;
 
 export const LinkStyled = styled(Link)`
