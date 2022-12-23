@@ -10,7 +10,6 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Container } from 'components/CommonStyles';
 
 const Movies = () => {
-  //const [searchWord, setSearchword] = useState('');
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
