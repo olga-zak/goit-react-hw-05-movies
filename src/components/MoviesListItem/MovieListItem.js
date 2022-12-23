@@ -23,13 +23,18 @@ export const Img = styled.img`
 
 export const Text = styled.p`
   padding: 10px;
-  color: #fff;
+  // color: #fff;
 `;
 
 export const LinkText = styled(Link)`
   display: block;
   text-align: center;
   text-decoration: none;
-  color: black;
+  text-transform: uppercase;
+  color: #fff;
   font-weight: 500;
+  transition: 0.4s;
+  &:hover {
+    color: #333;
+  }
 `;

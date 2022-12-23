@@ -3,11 +3,21 @@ import { Link } from 'react-router-dom';
 
 export const MovieCardWrapper = styled.div`
   position: relative;
-  width: 800px;
+  width: 300px;
   min-height: 250px;
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 730px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 850px;
+  }
 `;
 
 export const MovieHeader = styled.div`

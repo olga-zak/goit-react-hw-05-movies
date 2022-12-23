@@ -5,9 +5,8 @@ import { GlobalStyles } from './GlobalStyles';
 // import Home from 'pages/Home/Home';
 // import Movies from 'pages/Movies/Movies';
 // import MoviePage from 'pages/MoviePage/MoviePage';
-//import MovieCast from './MovieCast/MovieCast';
-//import MovieReviews from './MovieReviews/MovieReviews';
-import Header from './Header/Header';
+// import MovieCast from './MovieCast/MovieCast';
+// import MovieReviews from './MovieReviews/MovieReviews';
 
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('pages/Home/Home'));
@@ -19,9 +18,6 @@ const MovieReviews = lazy(() => import('./MovieReviews/MovieReviews'));
 export const App = () => {
   return (
     <>
-      <Header />
-      {/* <LoaderSuspense /> */}
-      {/* <Suspense fallback={<LoaderSuspense />}> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* index === path="/" */}
@@ -30,15 +26,15 @@ export const App = () => {
 
           <Route path="movies" element={<Movies />} />
 
-          {/* <Route path="movies/:movieId" element={<MoviePage />} /> */}
           <Route path="movies/:movieId" element={<MoviePage />}>
             <Route path="cast" element={<MovieCast />} />
             <Route path="reviews" element={<MovieReviews />} />
           </Route>
+
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
-      {/* </Suspense> */}
+
       <GlobalStyles />
     </>
   );

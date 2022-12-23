@@ -15,7 +15,6 @@ const MovieCast = () => {
     fetchMovieCreditsById(movieId).then(setCredits);
   }, [movieId]);
 
-  //console.log(credits); //сначала консолит нулл, потом только массив
   return (
     <>
       {credits && (
@@ -32,7 +31,6 @@ const MovieCast = () => {
           })}
         </List>
       )}
-      <p>Here will be additional info "Movie Cast"</p>
     </>
   );
 };

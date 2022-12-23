@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
-  width: 240px;
+  width: 220px;
   margin: 0 auto;
   padding: 30px 0;
   text-align: center;
-  background-color: #ffffff;
+  background-color: rgba(55, 59, 68, 0.5);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
