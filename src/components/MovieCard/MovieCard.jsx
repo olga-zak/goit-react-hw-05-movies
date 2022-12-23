@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 import {
   MovieCardWrapper,
   MovieHeader,
@@ -67,5 +67,19 @@ export const MovieCard = ({ movieData }) => {
   );
 };
 
-// !!!add proptypes!!!
-// https://codepen.io/simoberny/pen/WMMqwL
+MovieCard.propTypes = {
+  movieData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    overview: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    vote_average: PropTypes.number.isRequired,
+    backdrop_path: PropTypes.string.isRequired,
+  }).isRequired,
+};

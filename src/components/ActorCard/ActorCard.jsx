@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { CardWrapper, Img, Name, Role } from './ActorCard.styled';
 
 export const ActorCard = ({ name, role, photo_path }) => {
@@ -11,4 +12,10 @@ export const ActorCard = ({ name, role, photo_path }) => {
       </CardWrapper>
     </>
   );
+};
+
+ActorCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string,
+  photo_path: PropTypes.string,
 };
